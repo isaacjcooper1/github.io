@@ -1,23 +1,38 @@
 
-# GitHub Pages Portfolio (Corporate Style)
+# GitHub Pages Portfolio (Jekyll + Corporate Style)
 
-This is a simple, fast, and professional portfolio starter for engineers. It uses **plain HTML + CSS** and deploys on **GitHub Pages**.
+This starter takes the simple corporate HTML you liked and adds **Jekyll** so you can:
+
+- Use a **theme** (here: `jekyll-theme-minimal`) and Jekyll features.
+- Create pages in **Markdown** and share a common layout.
+- Keep your custom corporate CSS.
 
 ## How to Use
 
-1. Create a repository named `your-username.github.io` on GitHub (public).
-2. Upload the contents of this folder to the repo root (or push via Git).
-3. Visit `https://your-username.github.io` (first build can take ~1 minute).
+1. Create a public repo named `your-username.github.io`.
+2. Upload these files to the repo root and commit.
+3. Visit `https://your-username.github.io` (first publish can take ~1 minute).
 
 ## Customize
-- Replace placeholders like `your-github-username` and `your-linkedin-handle` in HTML.
-- Drop your resume at `assets/resume/Isaac-Cooper-Resume.pdf` (update filename if needed).
-- Add/duplicate project pages in `/projects` and update links on `index.html`.
-- Colors and spacing are in `assets/css/styles.css` under the `:root` variables.
+- Update `_config.yml` with your `url`, `title`, and switch `theme:` if desired.
+- Replace placeholders (`your-github-username`, `your-linkedin-handle`, email) in `index.md`.
+- Replace the resume at `assets/resume/Isaac-Cooper-Resume.pdf`.
+- Add new case studies by duplicating files in `/projects` and updating links.
 
-## Optional
-- Add a custom domain in the repo: **Settings → Pages → Custom domain**.
-- Add `CNAME` file with your domain (e.g., `isaaccooper.dev`).
+## Change Theme
+GitHub Pages supports built-in themes (Minimal, Cayman, Slate, etc.).
+- Edit `_config.yml` → `theme: jekyll-theme-slate` (example), commit, and Pages will rebuild.
+- Or use `remote_theme:` to load other public themes.
+
+## Local Preview (optional)
+If you want to run locally, install Ruby + Bundler, then:
+```
+bundle init # create Gemfile
+# add: gem 'github-pages', group: :jekyll_plugins
+bundle install
+bundle exec jekyll serve
+```
+Visit `http://localhost:4000`.
 
 ## License
 Use freely. No attribution required.
